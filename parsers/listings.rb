@@ -34,4 +34,3 @@ if page_num =~ /[0-9]/
         fetch_type: "browser"
     }
 end
-end
