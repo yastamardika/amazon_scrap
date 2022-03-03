@@ -14,5 +14,6 @@ pages << {
     url: "https://www.amazon.com/s?k=OLED&rh=n%3A6463520011&ref=nb_sb_noss",
     vars: {
       category: "OLED TVs"
-    }
+    },
+    fetch_type: "browser"
   }
