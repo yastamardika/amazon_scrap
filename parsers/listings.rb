@@ -1,7 +1,6 @@
 html = Nokogiri.HTML(content)
 
 products = html.css('[data-component-type="s-search-result"]', '.s-result-item')
-
 products.each do |product|
     a_element = product.css('.s-title-instructions-style')
     # p a_element
@@ -23,7 +22,6 @@ products.each do |product|
 end
  
 pagination_links = html.css('.s-pagination-item')
-p pagination_links
 pagination_links.each do |link|
 page_num = link.text.strip
     if page_num =~ /[0-9]/
