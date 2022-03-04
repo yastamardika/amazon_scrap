@@ -5,12 +5,13 @@ product = {}
 product['url'] = page['url']
 product['category'] = page['vars']['category']
 
+# product['asin'] = html.css('[name="ASIN"] > @value').text
 product['asin'] = html.css('[name="ASIN"] > @value').text
+p product['asin']
 
 # product['title'] = html.at_css('#productTitle').text.strip
 # product['title'] = html.at_css('#productTitle')
-# p product['title']
-product['title'] = html.css('.a-size-large.product-title-word-break').text.strip
+product['title'] = html.css('a.a-link-normal.s-underline-text.s-underline-link-text.s-link-style.a-text-normal').text.strip
 # p product['title']
 
 seller_node = html.at_css('a#bylineInfo')
